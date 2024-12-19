@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de Pan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="home.html" class="option-button">Inicio</a>
+    <div class="container">
+        <h1>Control de Venta de Pan</h1>
+        <form id="panForm">
+            <div id="daysContainer">
+                <!-- Los días se llenarán dinámicamente con JavaScript -->
+            </div>
+            <button type="button" onclick="calculateWeeklyTotal()">Calcular Total</button>
+        </form>
+        <div class="result" id="result">
+            <h2>Resultado Semanal</h2>
+            <p id="totalPanes"></p>
+            <p id="totalDinero"></p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

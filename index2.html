@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario de Alimentos</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <a href="home.html" class="option-button">Inicio</a>
+    <h1>Inventario de Alimentos</h1>
+
+    <!-- Botones de categorías -->
+    <div class="categories">
+        <button onclick="fetchData('aves')">Aves</button>
+        <button onclick="fetchData('bovinos')">Bovinos</button>
+        <button onclick="fetchData('cerdo')">Cerdo</button>
+    </div>
+
+    <!-- Tabla de productos -->
+    <table id="priceTable">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Precio (₡)</th>
+                <th>Unidades Disponibles</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+
+    <!-- Formulario para agregar nuevos productos -->
+    <div class="add-product">
+        <h2>Agregar Nuevo Producto</h2>
+        <select id="categorySelect">
+            <option value="aves">Aves</option>
+            <option value="bovinos">Bovinos</option>
+            <option value="cerdo">Cerdo</option>
+        </select>
+        <input type="text" id="productName" placeholder="Nombre del producto">
+        <input type="number" id="productPrice" placeholder="Precio (₡)">
+        <input type="number" id="productQuantity" placeholder="Cantidad">
+        <button onclick="addProduct()">Agregar Producto</button>
+    </div>
+
+    <script src="index2.js"></script>
+</body>
+</html>
